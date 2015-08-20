@@ -2093,15 +2093,6 @@ img.responsive-img, video.responsive-video {
   overflow: hidden;
   height: 700px; }  
 
-
-@media only screen and (max-width : 600px){
-  .parallax-container {
-  position: relative;
-  overflow: hidden;
-  height: 200px; } 
-
-}
-
 @media only screen and (max-width : 992px){
   .parallax-container {
   position: relative;
@@ -2109,6 +2100,23 @@ img.responsive-img, video.responsive-video {
   height: 700px; } 
 
 }
+
+@media only screen and (max-width : 600px){
+  .parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 650px; } 
+
+}
+
+@media only screen and (max-width : 400px ){
+  .parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 530px; } 
+
+}
+
 
 .parallax {
   position: absolute;
