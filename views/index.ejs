@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html>
+<html prefix="og: http://ogp.me/ns#">
   <head>
-  		<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Papergenie | WebDev Labs, NIT Surat</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PaperGenie is a previous year examinations paper portal exclusive to students of NIT Surat.">
+  <meta property="og:title" content="PaperGenie | WebDev Labs">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://papergenie.herokuapp.com/images/fb-icon.png">
+  <meta property="og:url" content="http://papergenie.herokuapp.com">
+  <meta property="og:description" content="PaperGenie is a previous year examinations paper portal exclusive to students of NIT Surat.">
+  <meta name="author" content="WebDev Labs, NIT Surat">
+  <meta http-equiv="cache-control" content="public" />
+  <meta http-equiv="expires" content="Mon, 24 August 2015, 00:00:00 GMT" />
+  <meta name="keywords" content="PaperGenie, Previous Year Examination Papers, Web Portal, SVNIT, NIT Surat, WebDev Labs"/>
+	<title>PaperGenie | WebDev Labs</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-     <link rel="stylesheet" type="text/css" href="/stylesheets/materialize.css">
-      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/materialize.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="/javascripts/materialize.min.js"></script>
 	<script type="text/javascript" src="/javascript/home.js"></script>
-		<script type="text/javascript">
-
-</script>
+	<script type="text/javascript">
+  </script>
   </head>
+
+  <style type="text/css">
+
+  p{
+     font-size:18px;
+  }
+
+  .modalDialog {
+  text-align: left;
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 300ms ease-in;
+  -moz-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  color:white;
+  overflow: auto;
+  width: 90%;
+  height: 70%;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #132157;
+  
+}
+
+.close {
+  background: #30479c;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: fixed;
+  right: 2px;
+  text-align: center;
+  top: 0px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #1ABC9C; }
+  </style>
+
+
   <body style="background-color:#132157">
      
 	<div class="parallax-container">
@@ -24,7 +100,7 @@
       
         
         
-        <div class="row z-depth-5" style="background-color:#132157; width:200px;" >
+        <div class="row z-depth-5" style="background-color:#132157; width:200px;padding:5px;" >
         	<form class="col s12">
         		<div class="container ">
         			<div class="input-field">
@@ -33,13 +109,26 @@
         			</div>
         		</div>
         	</form>
+
+          <p align="center"style="color:rgba(255,255,255,0.7);padding:10px;font-size:15px;" >Try U14ME001 for Demo</p>
         </div>
+
+
 
       
        <script type="text/javascript">
          $(document).ready(function(){
+          $('#modal').click(function(){
+            $('body').css('overflow','hidden');
+           
+          });
+          $('.close').click(function(){
+            $('body').css('overflow','scroll');
+           
+          });
 
-          confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added.");
+
+           
           
           $('.input-field').keydown(function(event){
             if(event.keyCode == 13){
@@ -63,16 +152,16 @@
       case '11':
       switch(z){
         case 'ma':
-         $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+         $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
 
       break;
 
       case 'ph':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'cy':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
       }
       break;
@@ -80,20 +169,20 @@
       case '12':
       switch(z){
         case 'ma':
-         $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+         $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
 
       break;
 
       case 'ph':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'cy':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
         case 'co':
-         $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+         $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'me':
@@ -101,19 +190,19 @@
       break;
 
       case 'ce':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'ec':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'ee':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'ch':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
       }
       break;
@@ -121,20 +210,20 @@
       case '13':
       switch(z){
         case 'ma':
-         $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+         $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
 
       break;
 
       case 'ph':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'cy':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
         case 'co':
-         $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+         $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'me':
@@ -142,19 +231,19 @@
       break;
 
       case 'ce':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'ec':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'ee':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
       
       case 'ch':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
       }
       break;
@@ -162,20 +251,20 @@
       case '14':
       switch(z){
         case 'ma':
-        $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+        $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
 
       break;
 
       case 'ph':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'cy':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
         case 'co':
-     $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+     $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
 
 
       break;
@@ -185,19 +274,19 @@
       break;
 
       case 'ce':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'ec':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
 
       case 'ee':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
       
       case 'ch':
-       $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+       $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
       break;
       }
       break;
@@ -205,11 +294,11 @@
       case '15':
       switch(a){
         case 'u':
-         $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+         $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
         break;
 
         case 'i':
-         $("#button").attachEvent("onClick", confirm("This is the beta version of the web app.For demo links for mechanical department from second to final year have been added."));
+         $("#button").attachEvent("onClick", confirm("PaperGenie is having Past Year Examination Papers of Mechanical Department only(2nd year onwards). Please contribute for your Department."));
         break;
       }
       break;
@@ -360,62 +449,116 @@
 </script>
 
 
-		<div class="row"><div class="col m12 l12 s12 center"><a >
+		<div class="row"><div class="col m12 l12 s12 center">
 
 
 		  <a class="btn-floating btn-large waves-effect z-depth-5" style="background-color:#132157"><i id="button" class="material-icons">get_app</i></a>
-    </div></div>
+    </div>
+</div>
+<br>
+
+<div class="row" align="center"  >
+         
+          <a class=" btn waves-effect  z-depth-4"  style="background-color:#132157;"  href="https://script.google.com/macros/s/AKfycbyepm3EsvZQMaJJcz-mOZl0N6CuUM1WgCqKVXJCJbUM7B9yldU/exec">
+             contribute papers  
+            <i class=" medium material-icons right">publish</i>
+
+            
+          </a>
+
+        </div>   
+
 		
         <div class="parallax">
-			<img class="responsive-img" src="/images/10.jpg">
+			<img class="responsive-img" src="/images/body.jpg">
 		</div>
 	 </div>
+
+    
+        
+
  
 	  <div style="background-color:#132157">
 	 	<div class="row" style="color:white;" align="center">
-	 	   <div class="col m4 l6 s6 " align="center">
+	 	   <div class="col m4 l4 s4 " align="center">
         
-        <h6   ><a href="https://www.facebook.com/webdevlabs/" style="color:#1ABC9C" target="_new">Powered by<br><img height="80px"  src="/images/web2.png"></a></h6> 
+        <h6   ><a href="https://www.facebook.com/webdevlabs/" style="color:#1ABC9C" target="_new">Powered by<br><img class="waves-effect"height="85px"  src="/images/web2.png"></a></h6> 
       
       
       
     </div>
 
-        <!--<div class="col m4 l4 s4 ">
-          <a class="waves-effect  z-depth-4 modal-trigger"style="padding:20px;" href="#modal1">FAQ</a>
-           <!-- Modal Structure 
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div> 
-        </div> --> 
+     <div class="col m4 l4 s4" style="padding-top:35px;">
+          <a class=" btn waves-effect  z-depth-4" id="modal" style="background-color:#1F2F6B;"  href="#openModal">FAQ</a>
+           <!-- Modal Structure -->
+                      
 
+<div id="openModal" class="modalDialog"  >
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+   <div class="z-depth-3" style="background-color:#30479c"> <h2 style="color:#1ABC9C;font-size:40px;padding:5px;" align="center">FAQs</h2></div>
 
- 
-          
+  <div> 
+   <h3 style="color:#1ABC9C">How to contribute?</h3>
+    <p>
+      To contribute papers click on the contribute papers button.
+       
+    </p>
+    <br>
+    <h3 style="color:#1ABC9C">
+      How to upload multiple papers?
+    </h3>
+    <p>
+      You can do this by compressing them into zip or rar format and uploading that.
+    </p>
+  <br>
+    <h3 style="color:#1ABC9C">Which Department Papers have been uploaded?</h3>
+    <p>Examination Papers for Mechanical Department from 2nd year onwards are uploaded. More Departments will be uploaded soon with your help!</p>
+    <br>
+    
+    
+<h3 style="color:#1ABC9C">
+  Can we submit papers in hard copy?
+</h3>
+<p>
+  You can contribute papers in hard copy by submitting them to: SVNIT Alumni Association Office, Near SBI ATM, SVNIT.
+  </p>
+  <br>
+  <h3 style="color:#1ABC9C">
+    NOTE:</h3>
+    <p>
+      CRs of all divisions should get in touch with the coordinators for this initiative.
+    </p>
+    <br>
+    <h3 style="color:#1ABC9C">
+      For Queries
+    </h3>
+    <p>
+      Contact Co-ordinators: <br>Noel Varghese: 9879830879<br>Jay Kachhadia: 8487011283
+    </p>
+<br>
+    <h3 style="color:#1ABC9C">
+      *Top Contributors will be rewarded with goodies.
+    </h3>
 
+ </div>
 
-	 	   	 <div class="col m4 l6 s6"><h6 >Contact us at</h6><h6> <a href="mailto:mail@webdevlabs.in" style="color:#1ABC9C">mail@web<br>devlabs.in</a></h6></div>
+  </div>
+</div>
+  
+   </div>
+
+	 	   	 <div class="col m4 l4 s4"><h6 style="color:#1ABC9C" >Contact us </h6> <a href="mailto:mail@webdevlabs.in" style="color:#1ABC9C"><i class=" medium material-icons  waves-effect">email</i></a></h6></div>
 	    
 	    </div>
  	 </div>
  	 
   
-
-        
   </script>
-
-
 	 
      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="/javascript/materialize.min.js"></script>
 
-	
 </body>
 
 </html> 
